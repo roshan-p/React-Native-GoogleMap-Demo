@@ -22,8 +22,8 @@ class PickerGG extends Component {
         latlng: {
             latitude: 13.746771,
             longitude: 100.562784,
-            latitudeDelta: 0.015,
-            longitudeDelta: 0.0121,
+            latitudeDelta: 0.030,
+            longitudeDelta: 0.030,
         },
 
         condo: '0', markers: [
@@ -32,8 +32,8 @@ class PickerGG extends Component {
                 latlng: {
                     latitude: 13.746771,
                     longitude: 100.562784,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121
+                    latitudeDelta: 0.030,
+                    longitudeDelta: 0.030
                 }, title: 'ASOKE',
                 price: '178000'
             },
@@ -41,8 +41,8 @@ class PickerGG extends Component {
                 latlng: {
                     latitude: 13.718336,
                     longitude: 100.587362,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121
+                    latitudeDelta: 0.030,
+                    longitudeDelta: 0.030
                 }, title: 'EKKAMAI',
                 price: '139000'
             },
@@ -50,8 +50,8 @@ class PickerGG extends Component {
                 latlng: {
                     latitude: 13.723176,
                     longitude: 100.521976,
-                    latitudeDelta: 0.015,
-                    longitudeDelta: 0.0121
+                    latitudeDelta: 0.030,
+                    longitudeDelta: 0.030
                 }, title: 'SILOM',
                 price: '205000'
 
