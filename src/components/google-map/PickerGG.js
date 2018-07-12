@@ -72,13 +72,8 @@ class PickerGG extends Component {
 
             }
         )
-        //   alert(this.state.title);
     }
     render() {
-        // let serviceItems = this.state.markers.map( (s, i) => {
-        //     return <Picker.Item key={i} value={i} label={s.price} />
-        // });
-
         return (
             <View style={styles.box_center}>
                 <View>
@@ -87,12 +82,10 @@ class PickerGG extends Component {
                         onValueChange={(value) => this.onChangeFunction(value)}
                         style={{ height: 50, width: (fullWidth - (fullWidth * 30 / 100)) }}
                         textStyle={{ fontSize: 12, color: 'yellow' }}
-                    // itemStyle={{ backgroundColor: "grey", color: "blue", fontFamily:"Ebrima", fontSize:17 }}
                     >
                         {this.state.markers.map((s, i) => {
                             return (<Picker.Item label={this.state.markers[i].title} value={i} key={i} />)
                         })}
-                        {/* {serviceItems} */}
                         {/* <Picker.Item label="ASOKE" value="0"/>
                         <Picker.Item label="EKKAMAI" value="1"/>
                         <Picker.Item label="SILOM" value="2"/> */}

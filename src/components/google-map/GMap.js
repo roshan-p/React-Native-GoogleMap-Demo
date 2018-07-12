@@ -18,11 +18,6 @@ const marginHeight = Math.round(dimensions.height / 30);
 var boxPosition = 50
 
 const styles = StyleSheet.create({
-    dropdown: {
-        ...StyleSheet.absoluteFillObject,
-
-        //alignItems: 'center',
-    },
     container: {
         ...StyleSheet.absoluteFillObject,
         marginTop: 40,
@@ -48,8 +43,6 @@ const styles = StyleSheet.create({
         width: fullWidth,
         height: boxHeight,
         marginBottom: boxPosition,
-       // paddingTop:5,
-
     },
     pinImg: {
         width: 25,
