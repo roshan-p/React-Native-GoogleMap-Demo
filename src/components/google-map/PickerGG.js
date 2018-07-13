@@ -20,42 +20,41 @@ const styles = StyleSheet.create({
 class PickerGG extends Component {
     state = {
         latlng: {
-            latitude: 13.746771,
-            longitude: 100.562784,
+            latitude: 13.727833,
+            longitude: 100.522568,
             latitudeDelta: 0.030,
             longitudeDelta: 0.030,
         },
-
         condo: '0', markers: [
 
             {
                 latlng: {
-                    latitude: 13.746771,
-                    longitude: 100.562784,
+                    latitude: 13.727833,
+                    longitude: 100.522568,
                     latitudeDelta: 0.030,
-                    longitudeDelta: 0.030
-                }, title: 'ASOKE',
+                    longitudeDelta: 0.030,
+                }, title: 'Bang rak',
                 price: '178000'
             },
             {
                 latlng: {
-                    latitude: 13.718336,
-                    longitude: 100.587362,
-                    latitudeDelta: 0.030,
-                    longitudeDelta: 0.030
-                }, title: 'EKKAMAI',
+                    latitude: 13.734856,
+                    longitude: 100.581400,
+                    latitudeDelta: 0.080,
+                    longitudeDelta: 0.080
+                }, title: 'Watthana',
                 price: '139000'
             },
-            {
-                latlng: {
-                    latitude: 13.723176,
-                    longitude: 100.521976,
-                    latitudeDelta: 0.030,
-                    longitudeDelta: 0.030
-                }, title: 'SILOM',
-                price: '205000'
+            // {
+            //     latlng: {
+            //         latitude: 13.723176,
+            //         longitude: 100.521976,
+            //         latitudeDelta: 0.030,
+            //         longitudeDelta: 0.030
+            //     }, title: 'SILOM',
+            //     price: '205000'
 
-            },
+            // },
         ],
     }
     updateCondo = (condo) => {

@@ -13,7 +13,7 @@ import MapView, { PROVIDER_GOOGLE, Marker, Circle } from 'react-native-maps';
 const { wh, wd } = Dimensions.get('window');
 const dimensions = Dimensions.get('window');
 const boxHeight = Math.round(dimensions.height / 7);
-const fullWidth = Math.round(dimensions.width / 1.5);
+const fullWidth = Math.round(dimensions.width / 1.3);
 const marginHeight = Math.round(dimensions.height / 30);
 var boxPosition = 50
 
@@ -67,26 +67,33 @@ export default class GMap extends Component {
         super(props);
         this.state = {
             region: {
-                latitude: 13.746771,
-                longitude: 100.562784,
-                latitudeDelta: 0.1,
-                longitudeDelta: 0.1,
+                latitude: 13.727833,
+                longitude: 100.522568,
+                latitudeDelta: 0.030,
+                longitudeDelta: 0.030,
             },
             markers: [
 
                 {
-                    latlng: { latitude: 13.746771, longitude: 100.562784 },
-                    area: "Khlong Toei Nuea", title: "Khlong Toei Nuea", price: 178000, prev_price: 177000, description: "Starting from THB 178,000/SQM", image: require('../../../images/condo_m.png'),
+                    latlng: { latitude: 13.734856, longitude: 100.581400, },
+                    area: "Watthana", title: "Watthana", price: 139000, prev_price: 139800, description: "Starting from THB 139,000/SQM",
 
                 },
                 {
+                    latlng: { latitude: 13.727833, longitude: 100.522568, },
+                    area: "Bang rak", title: "Bang rak", price: 205000, prev_price: 205000, description: "400M From BTS Surasak Starting from THB 205,000/SQM",
+
+                },
+            ],
+            buildings:[
+                {
                     latlng: { latitude: 13.718336, longitude: 100.587362 },
-                    area: "Khlong Tan Nuea", title: "Khlong Tan Nuea", price: 139000, prev_price: 139800, description: "Starting from THB 139,000/SQM", image: require('../../../images/condo_m.png'),
+                    area: "Watthana", title: "The lofts ekkamai", price: 139000, prev_price: 139800, description: "Starting from THB 139,000/SQM", image: require('../../../images/condo_m.png'),
 
                 },
                 {
                     latlng: { latitude: 13.723176, longitude: 100.521976 },
-                    area: "Bang rak", title: "Bang rak", price: 205000, prev_price: 205000, description: "400M From BTS Surasak Starting from THB 205,000/SQM", image: require('../../../images/condo_m.png'),
+                    area: "Bang rak", title: "The lofts silom", price: 205000, prev_price: 205000, description: "400M From BTS Surasak Starting from THB 205,000/SQM", image: require('../../../images/condo_m.png'),
 
                 },
             ],
@@ -111,51 +118,51 @@ export default class GMap extends Component {
                 },
                 {
                     all_latlng: [
-                        { latitude: 13.748328, longitude: 100.550163},
-                        { latitude: 13.742825, longitude: 100.550807},
-                        { latitude: 13.741283, longitude: 100.554498},
-                        { latitude: 13.710891, longitude: 100.597376},
-                        { latitude: 13.704595, longitude: 100.601582},
-                        { latitude: 13.706471, longitude: 100.605702},
-                        { latitude: 13.707034, longitude: 100.605337},
-                        { latitude: 13.707097, longitude: 100.605187},
-                        { latitude: 13.707618, longitude: 100.605036},
-                        { latitude: 13.707743, longitude: 100.604779},
-                        { latitude: 13.708327, longitude: 100.604521},
-                        { latitude: 13.709119, longitude: 100.603942},
-                        { latitude: 13.709848, longitude: 100.603406},
-                        { latitude: 13.710390, longitude: 100.603448},
-                        { latitude: 13.710828, longitude: 100.603170},
-                        { latitude: 13.711933, longitude: 100.602633},
-                        { latitude: 13.712058, longitude: 100.602526},
-                        { latitude: 13.712037, longitude: 100.601839},
-                        { latitude: 13.712955, longitude: 100.601839},
-                        { latitude: 13.713538, longitude: 100.602290},
-                        { latitude: 13.714254, longitude: 100.605397},
-                        { latitude: 13.715338, longitude: 100.606212},
-                        { latitude: 13.716026, longitude: 100.606577},
-                        { latitude: 13.718424, longitude: 100.606040},
-                        { latitude: 13.718986, longitude: 100.606684},
-                        { latitude: 13.720070, longitude: 100.605314},
-                        { latitude: 13.720216, longitude: 100.605228},
-                        { latitude: 13.720925, longitude: 100.605786},
-                        { latitude: 13.722905, longitude: 100.605507},
-                        { latitude: 13.726720, longitude: 100.605271},
-                        { latitude: 13.730639, longitude: 100.604713},
-                        { latitude: 13.737475, longitude: 100.604783},
-                        { latitude: 13.737601, longitude: 100.604740},
-                        { latitude: 13.738184, longitude: 100.598410},
-                        { latitude: 13.738684, longitude: 100.598238},
-                        { latitude: 13.740581, longitude: 100.598689},
-                        { latitude: 13.740665, longitude: 100.598753},
-                        { latitude: 13.742968, longitude: 100.586927},
-                        { latitude: 13.745239, longitude: 100.576636},
-                        { latitude: 13.747035, longitude: 100.567119},
-                        { latitude: 13.748181, longitude: 100.561197},
-                        { latitude: 13.748434, longitude: 100.558707},
-                        { latitude: 13.748267, longitude: 100.555381},
-                        { latitude: 13.748256, longitude: 100.551254},
-                        { latitude: 13.748339, longitude: 100.550202}
+                        { latitude: 13.748328, longitude: 100.550163 },
+                        { latitude: 13.742825, longitude: 100.550807 },
+                        { latitude: 13.741283, longitude: 100.554498 },
+                        { latitude: 13.710891, longitude: 100.597376 },
+                        { latitude: 13.704595, longitude: 100.601582 },
+                        { latitude: 13.706471, longitude: 100.605702 },
+                        { latitude: 13.707034, longitude: 100.605337 },
+                        { latitude: 13.707097, longitude: 100.605187 },
+                        { latitude: 13.707618, longitude: 100.605036 },
+                        { latitude: 13.707743, longitude: 100.604779 },
+                        { latitude: 13.708327, longitude: 100.604521 },
+                        { latitude: 13.709119, longitude: 100.603942 },
+                        { latitude: 13.709848, longitude: 100.603406 },
+                        { latitude: 13.710390, longitude: 100.603448 },
+                        { latitude: 13.710828, longitude: 100.603170 },
+                        { latitude: 13.711933, longitude: 100.602633 },
+                        { latitude: 13.712058, longitude: 100.602526 },
+                        { latitude: 13.712037, longitude: 100.601839 },
+                        { latitude: 13.712955, longitude: 100.601839 },
+                        { latitude: 13.713538, longitude: 100.602290 },
+                        { latitude: 13.714254, longitude: 100.605397 },
+                        { latitude: 13.715338, longitude: 100.606212 },
+                        { latitude: 13.716026, longitude: 100.606577 },
+                        { latitude: 13.718424, longitude: 100.606040 },
+                        { latitude: 13.718986, longitude: 100.606684 },
+                        { latitude: 13.720070, longitude: 100.605314 },
+                        { latitude: 13.720216, longitude: 100.605228 },
+                        { latitude: 13.720925, longitude: 100.605786 },
+                        { latitude: 13.722905, longitude: 100.605507 },
+                        { latitude: 13.726720, longitude: 100.605271 },
+                        { latitude: 13.730639, longitude: 100.604713 },
+                        { latitude: 13.737475, longitude: 100.604783 },
+                        { latitude: 13.737601, longitude: 100.604740 },
+                        { latitude: 13.738184, longitude: 100.598410 },
+                        { latitude: 13.738684, longitude: 100.598238 },
+                        { latitude: 13.740581, longitude: 100.598689 },
+                        { latitude: 13.740665, longitude: 100.598753 },
+                        { latitude: 13.742968, longitude: 100.586927 },
+                        { latitude: 13.745239, longitude: 100.576636 },
+                        { latitude: 13.747035, longitude: 100.567119 },
+                        { latitude: 13.748181, longitude: 100.561197 },
+                        { latitude: 13.748434, longitude: 100.558707 },
+                        { latitude: 13.748267, longitude: 100.555381 },
+                        { latitude: 13.748256, longitude: 100.551254 },
+                        { latitude: 13.748339, longitude: 100.550202 }
                     ],
                     area_name: 'Watthana'
                 },
@@ -224,7 +231,6 @@ export default class GMap extends Component {
         this.setState({ region })
     }
     fmtPrice(price) {
-        // var newPrice = price.toLocaleString();
         var newPrice = String(price).replace(/(.)(?=(\d{3})+$)/g, '$1,')
         return newPrice
     }
@@ -261,24 +267,10 @@ export default class GMap extends Component {
                         this.props.region
                     }
                     onRegionChange={this.onRegionChangeComplete}>
-                    {/* <MapView.Circle
-              center={this.state.markers[0].latlng}
-              radius={500}
-              strokeWidth={5} 
-              fillColor="#0f0a"/> */}
                     {this.state.areas.map((s, i) => {
-                        return (<MapView.Polyline coordinates={this.state.areas[i].all_latlng} strokeColor="#F00" strokeWidth={3} />)
+                        return (<MapView.Polyline key={i} coordinates={this.state.areas[i].all_latlng} strokeColor="#F00" strokeWidth={3} />)
                     })}
-                    {/* <MapView.Polyline
-		coordinates={
-          
-         
-        
-    }
-		strokeColor="#F00" 
 
-		strokeWidth={3}
-	/> */}
 
                     {this.state.markers.map((marker, i) => (
 
@@ -287,8 +279,20 @@ export default class GMap extends Component {
                             key={i}
                             coordinate={marker.latlng}
                             title={marker.title}
-                            image={marker.image}
+                            // image={marker.image}
                             description={marker.description}
+                        >
+                        </MapView.Marker>
+                    ))}
+                    {this.state.buildings.map((building, i) => (
+
+                        <MapView.Marker
+                            style={{ position: 'relative' }}
+                            key={i}
+                            coordinate={building.latlng}
+                            title={building.title}
+                            image={building.image}
+                            description={building.description}
                         >
                         </MapView.Marker>
                     ))}
@@ -304,9 +308,9 @@ export default class GMap extends Component {
                                 <Text style={styles.pinText}>
                                     Area: {marker.area}
                                     {"\n"}
-                                    Current Price: THB {this.fmtPrice(marker.price)}/Sqm
+                                    Current Average Price: THB {this.fmtPrice(marker.price)}/Sqm
                                     {"\n"}
-                                    Previous Price: THB {this.fmtPrice(marker.prev_price)}/Sqm
+                                    Previous Average Price: THB {this.fmtPrice(marker.prev_price)}/Sqm
                                     {"\n"}
                                     Status: {this.createStatus(marker.price, marker.prev_price)}
                                 </Text>
