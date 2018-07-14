@@ -85,9 +85,6 @@ class PickerGG extends Component {
                         {this.state.markers.map((s, i) => {
                             return (<Picker.Item label={this.state.markers[i].title} value={i} key={i} />)
                         })}
-                        {/* <Picker.Item label="ASOKE" value="0"/>
-                        <Picker.Item label="EKKAMAI" value="1"/>
-                        <Picker.Item label="SILOM" value="2"/> */}
                     </Picker>
 
 

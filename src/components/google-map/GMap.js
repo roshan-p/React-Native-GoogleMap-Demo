@@ -13,7 +13,7 @@ import MapView, { PROVIDER_GOOGLE, Marker, Circle } from 'react-native-maps';
 const { wh, wd } = Dimensions.get('window');
 const dimensions = Dimensions.get('window');
 const boxHeight = Math.round(dimensions.height / 7);
-const fullWidth = Math.round(dimensions.width / 1.3);
+const boxWidth = Math.round(dimensions.width / 1.3);
 const marginHeight = Math.round(dimensions.height / 30);
 var boxPosition = 50
 
@@ -40,20 +40,15 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         padding: 5,
         borderRadius: 10,
-        width: fullWidth,
+        width: boxWidth,
         height: boxHeight,
         marginBottom: boxPosition,
-    },
-    pinImg: {
-        width: 25,
-        height: 25,
-
     },
     pinText: {
         textAlign: 'center',
         margin: 5,
         color: 'black',
-        width: fullWidth,
+        width: boxWidth,
         height: boxHeight,
         marginTop: marginHeight,
     },
@@ -63,7 +58,6 @@ RADIUS = 500;
 export default class GMap extends Component {
 
     constructor(props) {
-        console.log(boxPosition)
         super(props);
         this.state = {
             region: {
@@ -255,10 +249,7 @@ export default class GMap extends Component {
     }
     render() {
         const { region } = this.props;
-        console.log(this.state.areas.length)
         return (
-
-
             <View style={styles.container}>
                 <MapView
                     provider={PROVIDER_GOOGLE}
@@ -320,8 +311,6 @@ export default class GMap extends Component {
                     ))}
                 </MapView>
             </View>
-
-
         );
     }
 }
